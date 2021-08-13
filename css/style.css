@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	outline: none;
+
+    font-family: 'Source Sans Pro', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 15px;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    padding: 0;
+    list-style: none;
+}
+
+h2, h3 {
+    margin: 0;
+}
+
+p {
+    margin: 0;
+}
+
+.reset-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 32px 32px;
+    background-color: #E5E5E5;
+}
+
+/* SIDEBAR */
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    margin-right: 16px;
+}
+
+.sidebar__header {
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 35px;
+    color: #3F3F3F;
+    margin-bottom: 16px;
+}
+
+.sidebar__add-form {
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+    background: #FFFEFB;
+    box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.04), 0px 6px 10px rgba(0, 0, 0, 0.02);
+    border-radius: 4px;
+}
+
+.sidebar___input-name {
+    font-size: 10px;
+    line-height: 13px;
+    letter-spacing: -0.02em;
+    color: #49485E;
+    margin-bottom: 5px;
+}
+
+.required {
+    position: absolute;
+    margin-left: 2px;
+    margin-top: 2px;
+}
+
+.sidebar__add-input {
+    background: transparent;
+    border: none;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    padding: 11px 16px;
+    margin-bottom: 16px;
+}
+
+input::placeholder {
+    color: #B4B4B4;
+}
+
+.sidebar__add-descrip {
+    height: 108px;
+    resize: none;
+}
+
+textarea::placeholder {
+    color: #B4B4B4;
+}
+
+.sidebar__add-btn {
+    height: 36px;
+    background: #EEEEEE;
+    border-radius: 10px;
+    border: none;
+
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: -0.02em;
+    color: #B4B4B4;
+    transition: background-color, color 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.sidebar__add-btn:hover {
+    background-color: rgb(180, 180, 180);
+    color: #FFFEFB;
+}
+
+.sidebar__add-btn:active {
+        transform: translateY(1px);
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* PRODUCTS */
+
+.products {
+    width: 74%;
+}
+
+#sort {
+    background: #FFFEFB;
+    border: none;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    padding: 11px 16px;
+
+    color: #B4B4B4;
+    margin-bottom: 12px;
+}
+
+.products__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.products__item {
+    display: flex;
+    flex-direction: column;
+    width: 32%;
+    min-width: 215px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    cursor: pointer;
+    background-color: #FFFEFB;
+    box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.04), 0px 6px 10px rgba(0, 0, 0, 0.02);
+}
+
+.products__item-img {
+    width: 100%;
+    height: 200px;
+    background-image: url(../img/card-img.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.products__item-info {
+    display: flex;
+    flex-direction: column;
+    padding: 16px 16px 24px 16px;
+}
+
+.products__item-name {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 25px;
+    color: #3F3F3F;
+    margin-bottom: 16px;
+}
+
+.products__item-descrip {
+    font-size: 16px;
+    line-height: 20px;
+    color: #3F3F3F;
+    margin-bottom: 32px;
+}
+
+.products__item-price {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 30px;
+    color: #3F3F3F;
+}
+
+@media (max-width: 1024px) {
+    .sidebar {
+        width: 35%;
+    }
+
+    .products {
+        width: 64%;
+    }
+
+    .products__item {
+        width: 49%;
+    }
+}
+
+@media (max-width: 830px) {
+    .sidebar {
+        width: 49%;
+    }
+
+    .products {
+        width: 50%;
+    }
+
+    .products__item {
+        width: 99%;
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        margin-bottom: 32px;
+    }
+
+    .sidebar {
+        width: 100%;
+    }
+
+    .products {
+        width: 100%;
+    }
+
+    .products__item {
+        width: 49%;
+    }
+}
+
+@media (max-width: 520px) {
+    .products__item {
+        width: 99%;
+    }
+}
+

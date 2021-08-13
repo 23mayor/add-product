@@ -136,6 +136,12 @@ textarea::placeholder {
     width: 74%;
 }
 
+.products__select-box {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 12px;
+}
+
 #sort {
     background: #FFFEFB;
     border: none;
@@ -145,7 +151,6 @@ textarea::placeholder {
     cursor: pointer;
 
     color: #B4B4B4;
-    margin-bottom: 12px;
 }
 
 .products__list {
